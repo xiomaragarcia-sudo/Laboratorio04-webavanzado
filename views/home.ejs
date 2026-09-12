@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="grey lighten-4">
+
+  <!-- Navegación -->
+  <nav class="blue darken-3">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo"><i class="material-icons left">cloud</i>Express App</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="active"><a href="/">Inicio</a></li>
+        <li><a href="/about">Acerca de</a></li>
+        <li><a href="/contact">Contacto</a></li>
+        <li><a href="/admin">Admin</a></li>
+        <li><a href="/pokedex">Pokédex</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner principal (Hero) -->
+  <div class="blue darken-2 white-text center-align" style="padding: 50px 20px;">
+    <div class="container">
+      <h3 style="margin-top: 0;">¡Bienvenido a la Aplicación!</h3>
+      <p class="flow-text">Proyecto web desarrollado con Express.js, motor de plantillas EJS y Material Design.</p>
+      <a href="/pokedex" class="btn-large waves-effect waves-light orange darken-2" style="margin-top: 15px;">
+        <i class="material-icons left">catching_pokemon</i>Ir a la Pokédex
+      </a>
+    </div>
+  </div>
+
+  <!-- Tarjetas de Acceso Rápido -->
+  <div class="container" style="margin-top: 40px; margin-bottom: 40px;">
+    <div class="row">
+
+      <div class="col s12 m6 l3">
+        <div class="card hoverable center-align">
+          <div class="card-content">
+            <i class="material-icons large blue-text">info</i>
+            <span class="card-title">Acerca de</span>
+            <p>Conoce los detalles de la aplicación y la arquitectura MVC.</p>
+          </div>
+          <div class="card-action">
+            <a href="/about" class="blue-text font-weight-bold">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6 l3">
+        <div class="card hoverable center-align">
+          <div class="card-content">
+            <i class="material-icons large green-text">email</i>
+            <span class="card-title">Contacto</span>
+            <p>Envíanos tus comentarios o dudas a través del formulario.</p>
+          </div>
+          <div class="card-action">
+            <a href="/contact" class="green-text font-weight-bold">Escribir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6 l3">
+        <div class="card hoverable center-align">
+          <div class="card-content">
+            <i class="material-icons large purple-text">dashboard</i>
+            <span class="card-title">Admin</span>
+            <p>Revisa los mensajes guardados dinámicamente en memoria.</p>
+          </div>
+          <div class="card-action">
+            <a href="/admin" class="purple-text font-weight-bold">Administrar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6 l3">
+        <div class="card hoverable center-align">
+          <div class="card-content">
+            <i class="material-icons large red-text">catching_pokemon</i>
+            <span class="card-title">Pokédex</span>
+            <p>Registra nuevos Pokémon y revísalos en la tabla interactiva.</p>
+          </div>
+          <div class="card-action">
+            <a href="/pokedex" class="red-text font-weight-bold">Abrir Pokédex</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="grey lighten-4">
+
+  <!-- Navegación -->
+  <nav class="blue darken-3">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo"><i class="material-icons left">cloud</i>Express App</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/about">Acerca de</a></li>
+        <li><a href="/contact">Contacto</a></li>
+        <li class="active"><a href="/admin">Admin</a></li>
+        <li><a href="/pokedex">Pokédex</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner principal (Hero) -->
+  <div class="blue darken-2 white-text center-align" style="padding: 40px 20px;">
+    <div class="container">
+      <h3 style="margin-top: 0;">Panel de Administración</h3>
+      <p class="flow-text">Consulta y administra los mensajes recibidos a través del formulario de contacto.</p>
+    </div>
+  </div>
+
+  <!-- Contenido Principal -->
+  <div class="container" style="margin-top: 30px; margin-bottom: 50px;">
+    <div class="row">
+      <div class="col s12">
+        <div class="card-panel white z-depth-1" style="border-radius: 8px;">
+          
+          <!-- Cabecera del panel -->
+          <div class="row" style="margin-bottom: 20px; display: flex; align-items: center; flex-wrap: wrap;">
+            <div class="col s12 m6">
+              <h5 style="margin: 0; font-weight: 500;">
+                <i class="material-icons left blue-text text-darken-3">inbox</i>Mensajes Recibidos
+              </h5>
+            </div>
+            <div class="col s12 m6 right-align">
+              <a href="/contact" class="btn waves-effect waves-light green darken-1">
+                <i class="material-icons left">add</i>Enviar Nuevo Mensaje
+              </a>
+            </div>
+          </div>
+
+          <!-- Listado de Mensajes -->
+          <% if (messages.length === 0) { %>
+            <div class="center-align grey-text text-darken-1" style="padding: 40px 0;">
+              <i class="material-icons large" style="color: #ccc;">mark_email_read</i>
+              <h5>No hay mensajes guardados aún</h5>
+              <p>Envía un mensaje desde el formulario de contacto para verlo registrado en esta lista.</p>
+            </div>
+          <% } else { %>
+            <ul class="collection z-depth-1" style="border-radius: 6px;">
+              <% messages.forEach(m => { %>
+                <li class="collection-item avatar" style="padding-top: 15px; padding-bottom: 15px;">
+                  <i class="material-icons circle blue darken-2">person</i>
+                  <span class="title" style="font-weight: bold; font-size: 1.1rem;"><%= m.nombre %></span>
+                  <p class="grey-text text-darken-1" style="margin-top: 2px;">
+                    <i class="material-icons tiny" style="vertical-align: middle;">email</i> <%= m.email %>
+                  </p>
+                  <p style="margin-top: 10px; font-size: 1.05rem;" class="black-text">
+                    "<%= m.mensaje %>"
+                  </p>
+                </li>
+              <% }) %>
+            </ul>
+          <% } %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# 🚀 Mi Sitio Express - Laboratorio Web MVC
+
+Aplicación web desarrollada con **Node.js**, **Express**, **EJS** y **Materialize CSS** bajo la arquitectura **MVC (Modelo-Vista-Controlador)**.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+* **Node.js** - Entorno de ejecución para JavaScript.
+* **Express.js** - Framework web para Node.js.
+* **EJS (Embedded JavaScript)** - Motor de plantillas dinámicas.
+* **Materialize CSS** - Framework CSS basado en Material Design.
+
+---
+
+## 📌 Funcionalidades y Rutas
+
+* **Inicio (`/`)**: Página de bienvenida con tarjetas de acceso rápido a las secciones.
+* **Acerca de (`/about`)**: Información técnica sobre la arquitectura MVC y tecnologías utilizadas.
+* **Contacto (`/contact`)**: Formulario para enviar mensajes. Los datos se imprimen en la consola de Node.js mediante `console.log()`.
+* **Admin (`/admin`)**: Panel de administración para visualizar los mensajes de contacto guardados en memoria.
+* **Pokédex (`/pokedex`)**: Módulo de temática libre estilo Pokédex retro para registrar Pokémon con 5 campos (Nombre, Tipo, Nivel, HP y Habilidad) y listarlos en una tabla interactiva.
+* **Página 404**: Middleware personalizado para el manejo de rutas no encontradas.
+
+---
+
+## 🚀 Instrucciones de Instalación y Ejecución
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/TU-USUARIO/mi-sitio-express.git](https://github.com/TU-USUARIO/mi-sitio-express.git)
+   cd mi-sitio-express

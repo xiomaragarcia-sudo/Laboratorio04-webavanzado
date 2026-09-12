@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="grey lighten-4">
+
+  <!-- Navegación -->
+  <nav class="blue darken-3">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo"><i class="material-icons left">cloud</i>Express App</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/about">Acerca de</a></li>
+        <li class="active"><a href="/contact">Contacto</a></li>
+        <li><a href="/admin">Admin</a></li>
+        <li><a href="/pokedex">Pokédex</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner principal (Hero) -->
+  <div class="blue darken-2 white-text center-align" style="padding: 40px 20px;">
+    <div class="container">
+      <h3 style="margin-top: 0;">Formulario de Contacto</h3>
+      <p class="flow-text">Envía tus comentarios o consultas. Los mensajes se registrarán dinámicamente en el panel de administración.</p>
+    </div>
+  </div>
+
+  <!-- Formulario estilizado -->
+  <div class="container" style="margin-top: -30px; margin-bottom: 50px;">
+    <div class="row">
+      <div class="col s12 m10 offset-m1 l8 offset-l2">
+        <div class="card-panel white z-depth-2" style="padding: 30px; border-radius: 8px;">
+          <form action="/contact" method="POST">
+            
+            <div class="input-field">
+              <i class="material-icons prefix blue-text">account_circle</i>
+              <input id="nombre" type="text" name="nombre" required class="validate">
+              <label for="nombre">Nombre Completo</label>
+            </div>
+
+            <div class="input-field">
+              <i class="material-icons prefix blue-text">email</i>
+              <input id="email" type="email" name="email" required class="validate">
+              <label for="email">Correo Electrónico</label>
+            </div>
+
+            <div class="input-field">
+              <i class="material-icons prefix blue-text">message</i>
+              <textarea id="mensaje" class="materialize-textarea validate" name="mensaje" required></textarea>
+              <label for="mensaje">Tu Mensaje</label>
+            </div>
+
+            <div class="center-align" style="margin-top: 30px;">
+              <button type="submit" class="btn-large waves-effect waves-light green darken-1" style="margin-right: 10px;">
+                <i class="material-icons left">send</i>Enviar Mensaje
+              </button>
+              <a href="/" class="btn-large waves-effect waves-light grey">
+                <i class="material-icons left">arrow_back</i>Volver
+              </a>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
